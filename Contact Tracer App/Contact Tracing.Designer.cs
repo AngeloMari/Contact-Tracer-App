@@ -48,6 +48,9 @@ namespace Contact_Tracer_App
             this.pnlColor = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rbtnAM = new System.Windows.Forms.RadioButton();
+            this.rbtnPM = new System.Windows.Forms.RadioButton();
             this.pnlColor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +82,7 @@ namespace Contact_Tracer_App
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(194, 193);
+            this.lblTime.Location = new System.Drawing.Point(180, 194);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(37, 15);
             this.lblTime.TabIndex = 4;
@@ -173,14 +176,14 @@ namespace Contact_Tracer_App
             // 
             this.txtboxTemp.Location = new System.Drawing.Point(95, 190);
             this.txtboxTemp.Name = "txtboxTemp";
-            this.txtboxTemp.Size = new System.Drawing.Size(89, 23);
+            this.txtboxTemp.Size = new System.Drawing.Size(44, 23);
             this.txtboxTemp.TabIndex = 16;
             // 
             // txtboxTime
             // 
-            this.txtboxTime.Location = new System.Drawing.Point(237, 190);
+            this.txtboxTime.Location = new System.Drawing.Point(223, 190);
             this.txtboxTime.Name = "txtboxTime";
-            this.txtboxTime.Size = new System.Drawing.Size(89, 23);
+            this.txtboxTime.Size = new System.Drawing.Size(59, 23);
             this.txtboxTime.TabIndex = 17;
             // 
             // pnlColor
@@ -195,7 +198,7 @@ namespace Contact_Tracer_App
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(3, 35);
+            this.btnEdit.Location = new System.Drawing.Point(4, 37);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 1;
@@ -212,11 +215,45 @@ namespace Contact_Tracer_App
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(139, 194);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 15);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "°C";
+            // 
+            // rbtnAM
+            // 
+            this.rbtnAM.AutoSize = true;
+            this.rbtnAM.Location = new System.Drawing.Point(286, 177);
+            this.rbtnAM.Name = "rbtnAM";
+            this.rbtnAM.Size = new System.Drawing.Size(44, 19);
+            this.rbtnAM.TabIndex = 20;
+            this.rbtnAM.TabStop = true;
+            this.rbtnAM.Text = "AM";
+            this.rbtnAM.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPM
+            // 
+            this.rbtnPM.AutoSize = true;
+            this.rbtnPM.Location = new System.Drawing.Point(286, 202);
+            this.rbtnPM.Name = "rbtnPM";
+            this.rbtnPM.Size = new System.Drawing.Size(43, 19);
+            this.rbtnPM.TabIndex = 21;
+            this.rbtnPM.TabStop = true;
+            this.rbtnPM.Text = "PM";
+            this.rbtnPM.UseVisualStyleBackColor = true;
+            // 
             // Contact_Tracing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 231);
+            this.ClientSize = new System.Drawing.Size(436, 246);
+            this.Controls.Add(this.rbtnPM);
+            this.Controls.Add(this.rbtnAM);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlColor);
             this.Controls.Add(this.txtboxTime);
             this.Controls.Add(this.txtboxTemp);
@@ -262,6 +299,9 @@ namespace Contact_Tracer_App
         private System.Windows.Forms.Panel pnlColor;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rbtnAM;
+        private System.Windows.Forms.RadioButton rbtnPM;
     }
 }
 
