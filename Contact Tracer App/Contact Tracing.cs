@@ -18,9 +18,35 @@ namespace Contact_Tracer_App
             InitializeComponent();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnDone_Click(object sender, EventArgs e)
         {
-            
+            txtboxAddress.Enabled = false;
+            txtboxAge.Enabled = false;
+            txtboxContact.Enabled = false;
+            txtboxEmail.Enabled = false;
+            txtboxName.Enabled = false;
+            txtboxTemp.Enabled = false;
+            txtboxTime.Enabled = false;
+            rbtnAM.Enabled = false;
+            rbtnPM.Enabled = false;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            txtboxAddress.Enabled = true;
+            txtboxAge.Enabled = true;
+            txtboxContact.Enabled = true;
+            txtboxEmail.Enabled = true;
+            txtboxName.Enabled = true;
+            txtboxTemp.Enabled = true;
+            txtboxTime.Enabled = true;
+            rbtnAM.Enabled = true;
+            rbtnPM.Enabled = true;
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
