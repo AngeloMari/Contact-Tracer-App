@@ -52,6 +52,7 @@ namespace Contact_Tracer_App
             this.lblSubcontact = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
+            this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtboxName
@@ -324,12 +325,28 @@ namespace Contact_Tracer_App
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(201, 347);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(74, 23);
+            this.btnOK.TabIndex = 25;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // Contact_Tracing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(495, 428);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnEdit);
@@ -386,6 +403,7 @@ namespace Contact_Tracer_App
         private System.Windows.Forms.Label lblSubcontact;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnX;
+        private System.Windows.Forms.Button btnOK;
     }
 }
 
