@@ -52,7 +52,7 @@ namespace Contact_Tracer_App
             this.lblSubcontact = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtboxName
@@ -240,9 +240,9 @@ namespace Contact_Tracer_App
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(272, 385);
+            this.btnEdit.Location = new System.Drawing.Point(273, 393);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(74, 23);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -303,7 +303,7 @@ namespace Contact_Tracer_App
             this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDone.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDone.ForeColor = System.Drawing.Color.White;
-            this.btnDone.Location = new System.Drawing.Point(136, 385);
+            this.btnDone.Location = new System.Drawing.Point(156, 393);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(74, 23);
             this.btnDone.TabIndex = 23;
@@ -325,20 +325,20 @@ namespace Contact_Tracer_App
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
-            // btnOK
+            // btnSave
             // 
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(201, 347);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(74, 23);
-            this.btnOK.TabIndex = 25;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(156, 393);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(74, 23);
+            this.btnSave.TabIndex = 25;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Contact_Tracing
             // 
@@ -346,7 +346,7 @@ namespace Contact_Tracer_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(495, 428);
-            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnEdit);
@@ -374,6 +374,7 @@ namespace Contact_Tracer_App
             this.Name = "Contact_Tracing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing";
+            this.Load += new System.EventHandler(this.Contact_Tracing_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,7 +404,7 @@ namespace Contact_Tracer_App
         private System.Windows.Forms.Label lblSubcontact;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnX;
-        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

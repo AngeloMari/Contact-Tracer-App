@@ -18,6 +18,47 @@ namespace Contact_Tracer_App
             InitializeComponent();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtboxAddress.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(txtboxAge.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(txtboxContact.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(txtboxEmail.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(txtboxName.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(txtboxTemp.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(txtboxTime.Text))
+            {
+                btnDone.Hide();
+            }
+            else if ((rbtnAM.Checked == false) && (rbtnPM.Checked == false))
+            {
+                btnDone.Hide();
+            }
+            else
+            {
+                btnDone.Show();
+                btnSave.Hide();
+            }
+        }
+
         private void btnDone_Click(object sender, EventArgs e)
         {
          
@@ -65,47 +106,14 @@ namespace Contact_Tracer_App
             rbtnPM.Enabled = true;
         }
 
-        private void btnX_Click(object sender, EventArgs e)
+            private void btnX_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void Contact_Tracing_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtboxAddress.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if (string.IsNullOrEmpty(txtboxAge.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if (string.IsNullOrEmpty(txtboxContact.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if (string.IsNullOrEmpty(txtboxEmail.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if (string.IsNullOrEmpty(txtboxName.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if (string.IsNullOrEmpty(txtboxTemp.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if (string.IsNullOrEmpty(txtboxTime.Text))
-            {
-                btnDone.Enabled = false;
-            }
-            else if ((rbtnAM.Checked == false) && (rbtnPM.Checked == false))
-            {
-                btnDone.Enabled = false;
-            }
-            else
-                btnDone.Enabled = true;
+            btnDone.Hide();
         }
     }
 }
