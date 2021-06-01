@@ -24,23 +24,29 @@ namespace Contact_Tracer_App
 
             int age;
             int.TryParse(txtboxAge.Text, out age);
-            if ((age<18)||(age>65))
+            if (int.TryParse(txtboxAge.Text, out age))
             {
-                MessageBox.Show("Sorry you are not allowed to go outside based on your age.");
+                if ((age < 18) || (age > 65))
+                {
+                    MessageBox.Show("Sorry you are not allowed to go outside based on your age.");
+                }
             }
-            else if ((age !>= 18) || (age !<= 65))
+            else
             {
-                MessageBox.Show("Please enter a number in the Age textbox!");
+                MessageBox.Show("Please enter a number for your age!");
             }
 
             int temp;
             int.TryParse(txtboxTemp.Text, out temp);
-            if (temp >= 37.4)
+            if (int.TryParse(txtboxTemp.Text, out temp))
             {
-                MessageBox.Show("Sorry, you are not allowed to enter." +
-                    "\nYour body temperature is " + temp + "\nYou have a fever!");
+                if (temp >= 37.4)
+                {
+                    MessageBox.Show("Sorry, you are not allowed to enter." +
+                        "\nYour body temperature is " + temp + "\nYou have a fever!");
+                }
             }
-            else if ((temp !<= 37.4))
+            else
             {
                 MessageBox.Show("Please enter a number in the Temperature textbox!");
             }
