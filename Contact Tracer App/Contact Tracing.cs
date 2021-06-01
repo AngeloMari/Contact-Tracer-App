@@ -142,11 +142,11 @@ namespace Contact_Tracer_App
         {//To hide done button and fill all fields first.
             btnDone.Hide();
 
-            //StreamWriter traceFile;
-            //traceFile = File.CreateText("Tracing.txt");
-            //traceFile.WriteLine("You can find the contact tracing details here.");
-            //traceFile.WriteLine("Each file with date as a name contains the information for each day.");
-            //traceFile.Close();
+            StreamWriter traceFile;
+            traceFile = File.CreateText("Contact_Tracing.txt");
+            traceFile.WriteLine("You can find the contact tracing details here.");
+            traceFile.WriteLine("Each file with date as a name contains the information for each day.");
+            traceFile.Close();
         }
     }
 }
