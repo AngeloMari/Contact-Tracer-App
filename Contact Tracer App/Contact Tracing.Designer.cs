@@ -44,15 +44,16 @@ namespace Contact_Tracer_App
             this.txtboxContact = new System.Windows.Forms.TextBox();
             this.txtboxEmail = new System.Windows.Forms.TextBox();
             this.txtboxTemp = new System.Windows.Forms.TextBox();
-            this.txtboxTime = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbtnAM = new System.Windows.Forms.RadioButton();
-            this.rbtnPM = new System.Windows.Forms.RadioButton();
+            this.lblDegrees = new System.Windows.Forms.Label();
             this.lblSubcontact = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.cmbboxHour = new System.Windows.Forms.ComboBox();
+            this.cmbboxMinute = new System.Windows.Forms.ComboBox();
+            this.cmbboxAMPM = new System.Windows.Forms.ComboBox();
+            this.lblColon = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtboxName
@@ -222,17 +223,6 @@ namespace Contact_Tracer_App
             this.txtboxTemp.Size = new System.Drawing.Size(44, 23);
             this.txtboxTemp.TabIndex = 16;
             // 
-            // txtboxTime
-            // 
-            this.txtboxTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
-            this.txtboxTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtboxTime.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtboxTime.ForeColor = System.Drawing.Color.Black;
-            this.txtboxTime.Location = new System.Drawing.Point(12, 362);
-            this.txtboxTime.Name = "txtboxTime";
-            this.txtboxTime.Size = new System.Drawing.Size(59, 23);
-            this.txtboxTime.TabIndex = 17;
-            // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
@@ -248,42 +238,16 @@ namespace Contact_Tracer_App
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // label1
+            // lblDegrees
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(62, 307);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 14);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "°C";
-            // 
-            // rbtnAM
-            // 
-            this.rbtnAM.AutoSize = true;
-            this.rbtnAM.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbtnAM.ForeColor = System.Drawing.Color.White;
-            this.rbtnAM.Location = new System.Drawing.Point(77, 349);
-            this.rbtnAM.Name = "rbtnAM";
-            this.rbtnAM.Size = new System.Drawing.Size(45, 18);
-            this.rbtnAM.TabIndex = 20;
-            this.rbtnAM.TabStop = true;
-            this.rbtnAM.Text = "AM";
-            this.rbtnAM.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPM
-            // 
-            this.rbtnPM.AutoSize = true;
-            this.rbtnPM.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbtnPM.ForeColor = System.Drawing.Color.White;
-            this.rbtnPM.Location = new System.Drawing.Point(77, 374);
-            this.rbtnPM.Name = "rbtnPM";
-            this.rbtnPM.Size = new System.Drawing.Size(45, 18);
-            this.rbtnPM.TabIndex = 21;
-            this.rbtnPM.TabStop = true;
-            this.rbtnPM.Text = "PM";
-            this.rbtnPM.UseVisualStyleBackColor = true;
+            this.lblDegrees.AutoSize = true;
+            this.lblDegrees.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDegrees.ForeColor = System.Drawing.Color.White;
+            this.lblDegrees.Location = new System.Drawing.Point(62, 307);
+            this.lblDegrees.Name = "lblDegrees";
+            this.lblDegrees.Size = new System.Drawing.Size(23, 14);
+            this.lblDegrees.TabIndex = 19;
+            this.lblDegrees.Text = "°C";
             // 
             // lblSubcontact
             // 
@@ -340,21 +304,154 @@ namespace Contact_Tracer_App
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // cmbboxHour
+            // 
+            this.cmbboxHour.AllowDrop = true;
+            this.cmbboxHour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
+            this.cmbboxHour.DropDownWidth = 1;
+            this.cmbboxHour.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbboxHour.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbboxHour.FormattingEnabled = true;
+            this.cmbboxHour.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbboxHour.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cmbboxHour.Location = new System.Drawing.Point(9, 367);
+            this.cmbboxHour.Name = "cmbboxHour";
+            this.cmbboxHour.Size = new System.Drawing.Size(40, 24);
+            this.cmbboxHour.TabIndex = 26;
+            this.cmbboxHour.SelectedIndexChanged += new System.EventHandler(this.cmbboxHour_SelectedIndexChanged);
+            // 
+            // cmbboxMinute
+            // 
+            this.cmbboxMinute.AllowDrop = true;
+            this.cmbboxMinute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
+            this.cmbboxMinute.DropDownWidth = 1;
+            this.cmbboxMinute.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbboxMinute.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbboxMinute.FormattingEnabled = true;
+            this.cmbboxMinute.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbboxMinute.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.cmbboxMinute.Location = new System.Drawing.Point(62, 367);
+            this.cmbboxMinute.Name = "cmbboxMinute";
+            this.cmbboxMinute.Size = new System.Drawing.Size(47, 24);
+            this.cmbboxMinute.TabIndex = 27;
+            // 
+            // cmbboxAMPM
+            // 
+            this.cmbboxAMPM.AllowDrop = true;
+            this.cmbboxAMPM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
+            this.cmbboxAMPM.DropDownWidth = 1;
+            this.cmbboxAMPM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbboxAMPM.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbboxAMPM.FormattingEnabled = true;
+            this.cmbboxAMPM.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.cmbboxAMPM.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.cmbboxAMPM.Location = new System.Drawing.Point(115, 367);
+            this.cmbboxAMPM.Name = "cmbboxAMPM";
+            this.cmbboxAMPM.Size = new System.Drawing.Size(47, 24);
+            this.cmbboxAMPM.TabIndex = 28;
+            // 
+            // lblColon
+            // 
+            this.lblColon.AutoSize = true;
+            this.lblColon.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblColon.ForeColor = System.Drawing.Color.White;
+            this.lblColon.Location = new System.Drawing.Point(50, 371);
+            this.lblColon.Name = "lblColon";
+            this.lblColon.Size = new System.Drawing.Size(12, 14);
+            this.lblColon.TabIndex = 29;
+            this.lblColon.Text = ":";
+            // 
             // Contact_Tracing
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(495, 450);
+            this.Controls.Add(this.lblColon);
+            this.Controls.Add(this.cmbboxAMPM);
+            this.Controls.Add(this.cmbboxMinute);
+            this.Controls.Add(this.cmbboxHour);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblSubcontact);
-            this.Controls.Add(this.rbtnPM);
-            this.Controls.Add(this.rbtnAM);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtboxTime);
+            this.Controls.Add(this.lblDegrees);
             this.Controls.Add(this.txtboxTemp);
             this.Controls.Add(this.txtboxEmail);
             this.Controls.Add(this.txtboxContact);
@@ -371,6 +468,7 @@ namespace Contact_Tracer_App
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtboxName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "Contact_Tracing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Tracing";
@@ -396,15 +494,16 @@ namespace Contact_Tracer_App
         private System.Windows.Forms.TextBox txtboxContact;
         private System.Windows.Forms.TextBox txtboxEmail;
         private System.Windows.Forms.TextBox txtboxTemp;
-        private System.Windows.Forms.TextBox txtboxTime;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rbtnAM;
-        private System.Windows.Forms.RadioButton rbtnPM;
+        private System.Windows.Forms.Label lblDegrees;
         private System.Windows.Forms.Label lblSubcontact;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ComboBox cmbboxHour;
+        private System.Windows.Forms.ComboBox cmbboxMinute;
+        private System.Windows.Forms.ComboBox cmbboxAMPM;
+        private System.Windows.Forms.Label lblColon;
     }
 }
 

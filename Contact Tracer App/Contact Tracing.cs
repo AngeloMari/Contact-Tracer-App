@@ -44,14 +44,6 @@ namespace Contact_Tracer_App
             {
                 btnDone.Hide();
             }
-            else if (string.IsNullOrEmpty(txtboxTime.Text))
-            {
-                btnDone.Hide();
-            }
-            else if ((rbtnAM.Checked == false) && (rbtnPM.Checked == false))
-            {
-                btnDone.Hide();
-            }
             else
             {
                 btnDone.Show();
@@ -63,14 +55,25 @@ namespace Contact_Tracer_App
                 txtboxEmail.Enabled = false;
                 txtboxName.Enabled = false;
                 txtboxTemp.Enabled = false;
-                txtboxTime.Enabled = false;
-                rbtnAM.Enabled = false;
-                rbtnPM.Enabled = false;
+                cmbboxAMPM.Enabled = false;
+                cmbboxHour.Enabled = false;
+                cmbboxMinute.Enabled = false;
             }
 
-            int age;
-            int.TryParse(txtboxAge.Text, out age);
-            if (int.TryParse(txtboxAge.Text, out age))
+            if (cmbboxHour.SelectedItem != null && !string.IsNullOrEmpty(cmbboxHour.SelectedItem.ToString()))
+            {
+                btnDone.Show();
+                btnSave.Hide();
+            }
+            else
+            {
+                btnDone.Hide();
+                btnSave.Show();
+            }
+
+            short age;
+            short.TryParse(txtboxAge.Text, out age);
+            if (short.TryParse(txtboxAge.Text, out age))
             {//To check the age
                 if ((age < 18) || (age > 65))
                 {
@@ -82,9 +85,9 @@ namespace Contact_Tracer_App
                 MessageBox.Show("Please enter a number for your age!");
             }
 
-            int temp;
-            int.TryParse(txtboxTemp.Text, out temp);
-            if (int.TryParse(txtboxTemp.Text, out temp))
+            float temp;
+            float.TryParse(txtboxTemp.Text, out temp);
+            if (float.TryParse(txtboxTemp.Text, out temp))
             {//To check the temperature
                 if (temp >= 37.4)
                 {
@@ -98,6 +101,11 @@ namespace Contact_Tracer_App
             }
         }
 
+        private void cmbboxHour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void btnDone_Click(object sender, EventArgs e)
         {//To write and save the contact tracing details
             StreamWriter traceFile;
@@ -109,8 +117,8 @@ namespace Contact_Tracer_App
             traceFile.WriteLine("Address: " + txtboxAddress.Text);
             traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
             traceFile.WriteLine("Email: " + txtboxEmail.Text);
-            traceFile.WriteLine("Temperature: " + txtboxTemp.Text);
-            traceFile.WriteLine("Time: " + txtboxTime.Text);
+            traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
+            traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
             traceFile.WriteLine("");
             traceFile.WriteLine("==================================================");
             traceFile.WriteLine("");
@@ -125,9 +133,9 @@ namespace Contact_Tracer_App
             txtboxEmail.Enabled = true;
             txtboxName.Enabled = true;
             txtboxTemp.Enabled = true;
-            txtboxTime.Enabled = true;
-            rbtnAM.Enabled = true;
-            rbtnPM.Enabled = true;
+            cmbboxAMPM.Enabled = true;
+            cmbboxHour.Enabled = true;
+            cmbboxMinute.Enabled = true;
 
             btnDone.Hide();
             btnSave.Show();
