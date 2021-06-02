@@ -109,8 +109,9 @@ namespace Contact_Tracer_App
         private void btnDone_Click(object sender, EventArgs e)
         {//To write and save the contact tracing details
             StreamWriter traceFile;
-            string createDate = File.GetCreationTime("Contact_Tracing.txt").ToLongDateString();
-
+            string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
+            string date = DateTime.UtcNow.ToLongDateString();
+            
             traceFile = File.AppendText(createDate);
             traceFile.WriteLine("Name: " + txtboxName.Text);
             traceFile.WriteLine("Age: " + txtboxAge.Text);
@@ -123,6 +124,12 @@ namespace Contact_Tracer_App
             traceFile.WriteLine("==================================================");
             traceFile.WriteLine("");
             traceFile.Close();
+
+            Read_Data readForm = new Read_Data();
+            readForm.Show();
+
+            Contact_Tracing traceForm = new Contact_Tracing();
+            traceForm.Hide();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
