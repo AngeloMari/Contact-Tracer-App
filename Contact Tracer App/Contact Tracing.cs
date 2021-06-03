@@ -72,7 +72,18 @@ namespace Contact_Tracer_App
             {//To check the age
                 if ((age < 18) || (age > 65))
                 {
+                    txtboxAddress.Enabled = false;
+                    txtboxAge.Enabled = false;
+                    txtboxContact.Enabled = false;
+                    txtboxEmail.Enabled = false;
+                    txtboxName.Enabled = false;
+                    txtboxTemp.Enabled = false;
+                    cmbboxAMPM.Enabled = false;
+                    cmbboxHour.Enabled = false;
+                    cmbboxMinute.Enabled = false;
+
                     btnRead.Hide();
+                    btnSave.Hide();
                     MessageBox.Show("Sorry, you are not allowed to go outside based on your age.");
                 }
                 else if ((age >= 18) || (age <= 65))
@@ -111,18 +122,30 @@ namespace Contact_Tracer_App
             else if (!short.TryParse(txtboxAge.Text, out short ageNum))
             {//To not allow the user from entering letters or word
                 btnRead.Hide();
-                MessageBox.Show("PLease enter a number!");
+                btnSave.Hide();
+                MessageBox.Show("Please enter a number on the Age textbox!");
             }
 
             //////////////////// To check the appropriate body temperature ////////////////////
 
-            else if (float.TryParse(txtboxTemp.Text, out float temp))
+            if (float.TryParse(txtboxTemp.Text, out float temp))
             {//To check the temperature
                 if (temp >= 37.4)
                 {
                     btnRead.Hide();
+                    btnSave.Hide();
                     MessageBox.Show("Sorry, you should not be going outside." +
                         "\nYour body temperature is " + temp + "°C" + "." + "\nYou have a fever!");
+
+                    txtboxAddress.Enabled = false;
+                    txtboxAge.Enabled = false;
+                    txtboxContact.Enabled = false;
+                    txtboxEmail.Enabled = false;
+                    txtboxName.Enabled = false;
+                    txtboxTemp.Enabled = false;
+                    cmbboxAMPM.Enabled = false;
+                    cmbboxHour.Enabled = false;
+                    cmbboxMinute.Enabled = false;
                 }
                 else if (temp < 37.4)
                 {//To write the file if the temperature is in range
@@ -160,7 +183,8 @@ namespace Contact_Tracer_App
             else if (!float.TryParse(txtboxTemp.Text, out float tempNum))
             {//To check the temperature
                 btnRead.Hide();
-                MessageBox.Show("PLease enter a number!");
+                btnSave.Hide();
+                MessageBox.Show("Please enter a number on the Temperature textbox!");
             }
         }
 
