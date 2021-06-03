@@ -33,6 +33,7 @@ namespace Contact_Tracer_App
             this.btnExit = new System.Windows.Forms.Button();
             this.lnklblHere = new System.Windows.Forms.LinkLabel();
             this.lblPrivacy = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtboxRead
@@ -55,7 +56,7 @@ namespace Contact_Tracer_App
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(175, 375);
+            this.btnExit.Location = new System.Drawing.Point(106, 375);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(74, 23);
             this.btnExit.TabIndex = 10;
@@ -86,12 +87,28 @@ namespace Contact_Tracer_App
             this.lblPrivacy.TabIndex = 12;
             this.lblPrivacy.Text = "To read privacy and terms, ";
             // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(239, 375);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(74, 23);
+            this.btnNew.TabIndex = 13;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // Read_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(425, 425);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.lblPrivacy);
             this.Controls.Add(this.lnklblHere);
             this.Controls.Add(this.btnExit);
@@ -113,5 +130,6 @@ namespace Contact_Tracer_App
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.LinkLabel lnklblHere;
         private System.Windows.Forms.Label lblPrivacy;
+        private System.Windows.Forms.Button btnNew;
     }
 }

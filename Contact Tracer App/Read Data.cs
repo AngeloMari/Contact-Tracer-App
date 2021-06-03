@@ -40,5 +40,12 @@ namespace Contact_Tracer_App
         {
             Application.Exit();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Contact_Tracing traceForm = new();
+            traceForm.Show();
+        }
     }
 }

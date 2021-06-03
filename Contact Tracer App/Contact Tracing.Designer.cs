@@ -62,7 +62,7 @@ namespace Contact_Tracer_App
             this.txtboxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtboxName.ForeColor = System.Drawing.Color.Black;
-            this.txtboxName.Location = new System.Drawing.Point(12, 82);
+            this.txtboxName.Location = new System.Drawing.Point(12, 102);
             this.txtboxName.Name = "txtboxName";
             this.txtboxName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtboxName.Size = new System.Drawing.Size(256, 23);
@@ -73,7 +73,7 @@ namespace Contact_Tracer_App
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(12, 63);
+            this.lblName.Location = new System.Drawing.Point(12, 83);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(50, 14);
             this.lblName.TabIndex = 2;
@@ -84,7 +84,7 @@ namespace Contact_Tracer_App
             this.lblTemp.AutoSize = true;
             this.lblTemp.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTemp.ForeColor = System.Drawing.Color.White;
-            this.lblTemp.Location = new System.Drawing.Point(12, 286);
+            this.lblTemp.Location = new System.Drawing.Point(12, 306);
             this.lblTemp.Name = "lblTemp";
             this.lblTemp.Size = new System.Drawing.Size(97, 14);
             this.lblTemp.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace Contact_Tracer_App
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(12, 345);
+            this.lblTime.Location = new System.Drawing.Point(12, 365);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(44, 14);
             this.lblTime.TabIndex = 4;
@@ -106,7 +106,7 @@ namespace Contact_Tracer_App
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(12, 228);
+            this.lblEmail.Location = new System.Drawing.Point(12, 248);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(105, 14);
             this.lblEmail.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace Contact_Tracer_App
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblContact.ForeColor = System.Drawing.Color.White;
-            this.lblContact.Location = new System.Drawing.Point(12, 173);
+            this.lblContact.Location = new System.Drawing.Point(12, 193);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(118, 14);
             this.lblContact.TabIndex = 6;
@@ -128,7 +128,7 @@ namespace Contact_Tracer_App
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAge.ForeColor = System.Drawing.Color.White;
-            this.lblAge.Location = new System.Drawing.Point(298, 63);
+            this.lblAge.Location = new System.Drawing.Point(298, 83);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(37, 14);
             this.lblAge.TabIndex = 7;
@@ -139,7 +139,7 @@ namespace Contact_Tracer_App
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAddress.ForeColor = System.Drawing.Color.White;
-            this.lblAddress.Location = new System.Drawing.Point(12, 118);
+            this.lblAddress.Location = new System.Drawing.Point(12, 138);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(65, 14);
             this.lblAddress.TabIndex = 8;
@@ -150,7 +150,7 @@ namespace Contact_Tracer_App
             this.lblSubname.AutoSize = true;
             this.lblSubname.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSubname.ForeColor = System.Drawing.Color.White;
-            this.lblSubname.Location = new System.Drawing.Point(77, 63);
+            this.lblSubname.Location = new System.Drawing.Point(77, 83);
             this.lblSubname.Name = "lblSubname";
             this.lblSubname.Size = new System.Drawing.Size(164, 13);
             this.lblSubname.TabIndex = 9;
@@ -162,7 +162,7 @@ namespace Contact_Tracer_App
             this.txtboxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxAddress.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtboxAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtboxAddress.Location = new System.Drawing.Point(12, 136);
+            this.txtboxAddress.Location = new System.Drawing.Point(12, 156);
             this.txtboxAddress.Name = "txtboxAddress";
             this.txtboxAddress.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtboxAddress.Size = new System.Drawing.Size(326, 23);
@@ -173,7 +173,7 @@ namespace Contact_Tracer_App
             this.lblSubaddress.AutoSize = true;
             this.lblSubaddress.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSubaddress.ForeColor = System.Drawing.Color.White;
-            this.lblSubaddress.Location = new System.Drawing.Point(99, 118);
+            this.lblSubaddress.Location = new System.Drawing.Point(99, 138);
             this.lblSubaddress.Name = "lblSubaddress";
             this.lblSubaddress.Size = new System.Drawing.Size(201, 13);
             this.lblSubaddress.TabIndex = 12;
@@ -185,7 +185,7 @@ namespace Contact_Tracer_App
             this.txtboxAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxAge.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtboxAge.ForeColor = System.Drawing.Color.Black;
-            this.txtboxAge.Location = new System.Drawing.Point(298, 82);
+            this.txtboxAge.Location = new System.Drawing.Point(298, 102);
             this.txtboxAge.Name = "txtboxAge";
             this.txtboxAge.Size = new System.Drawing.Size(40, 23);
             this.txtboxAge.TabIndex = 1;
@@ -196,7 +196,7 @@ namespace Contact_Tracer_App
             this.txtboxContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxContact.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtboxContact.ForeColor = System.Drawing.Color.Black;
-            this.txtboxContact.Location = new System.Drawing.Point(12, 191);
+            this.txtboxContact.Location = new System.Drawing.Point(12, 211);
             this.txtboxContact.Name = "txtboxContact";
             this.txtboxContact.Size = new System.Drawing.Size(266, 23);
             this.txtboxContact.TabIndex = 3;
@@ -207,7 +207,7 @@ namespace Contact_Tracer_App
             this.txtboxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxEmail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtboxEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtboxEmail.Location = new System.Drawing.Point(12, 246);
+            this.txtboxEmail.Location = new System.Drawing.Point(12, 266);
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(266, 23);
             this.txtboxEmail.TabIndex = 4;
@@ -218,7 +218,7 @@ namespace Contact_Tracer_App
             this.txtboxTemp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxTemp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtboxTemp.ForeColor = System.Drawing.Color.Black;
-            this.txtboxTemp.Location = new System.Drawing.Point(12, 304);
+            this.txtboxTemp.Location = new System.Drawing.Point(12, 324);
             this.txtboxTemp.Name = "txtboxTemp";
             this.txtboxTemp.Size = new System.Drawing.Size(44, 23);
             this.txtboxTemp.TabIndex = 5;
@@ -230,7 +230,7 @@ namespace Contact_Tracer_App
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(252, 415);
+            this.btnEdit.Location = new System.Drawing.Point(252, 435);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(74, 23);
             this.btnEdit.TabIndex = 10;
@@ -243,7 +243,7 @@ namespace Contact_Tracer_App
             this.lblDegrees.AutoSize = true;
             this.lblDegrees.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblDegrees.ForeColor = System.Drawing.Color.White;
-            this.lblDegrees.Location = new System.Drawing.Point(62, 307);
+            this.lblDegrees.Location = new System.Drawing.Point(62, 327);
             this.lblDegrees.Name = "lblDegrees";
             this.lblDegrees.Size = new System.Drawing.Size(23, 14);
             this.lblDegrees.TabIndex = 19;
@@ -254,7 +254,7 @@ namespace Contact_Tracer_App
             this.lblSubcontact.AutoSize = true;
             this.lblSubcontact.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSubcontact.ForeColor = System.Drawing.Color.White;
-            this.lblSubcontact.Location = new System.Drawing.Point(136, 173);
+            this.lblSubcontact.Location = new System.Drawing.Point(136, 193);
             this.lblSubcontact.Name = "lblSubcontact";
             this.lblSubcontact.Size = new System.Drawing.Size(139, 13);
             this.lblSubcontact.TabIndex = 22;
@@ -267,7 +267,7 @@ namespace Contact_Tracer_App
             this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRead.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRead.ForeColor = System.Drawing.Color.White;
-            this.btnRead.Location = new System.Drawing.Point(122, 415);
+            this.btnRead.Location = new System.Drawing.Point(122, 435);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(74, 23);
             this.btnRead.TabIndex = 11;
@@ -296,7 +296,7 @@ namespace Contact_Tracer_App
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(122, 415);
+            this.btnSave.Location = new System.Drawing.Point(122, 435);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(74, 23);
             this.btnSave.TabIndex = 9;
@@ -326,7 +326,7 @@ namespace Contact_Tracer_App
             "10",
             "11",
             "12"});
-            this.cmbboxHour.Location = new System.Drawing.Point(9, 367);
+            this.cmbboxHour.Location = new System.Drawing.Point(9, 387);
             this.cmbboxHour.Name = "cmbboxHour";
             this.cmbboxHour.Size = new System.Drawing.Size(40, 24);
             this.cmbboxHour.TabIndex = 6;
@@ -402,7 +402,7 @@ namespace Contact_Tracer_App
             "57",
             "58",
             "59"});
-            this.cmbboxMinute.Location = new System.Drawing.Point(62, 367);
+            this.cmbboxMinute.Location = new System.Drawing.Point(62, 387);
             this.cmbboxMinute.Name = "cmbboxMinute";
             this.cmbboxMinute.Size = new System.Drawing.Size(47, 24);
             this.cmbboxMinute.TabIndex = 7;
@@ -420,7 +420,7 @@ namespace Contact_Tracer_App
             this.cmbboxAMPM.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.cmbboxAMPM.Location = new System.Drawing.Point(115, 367);
+            this.cmbboxAMPM.Location = new System.Drawing.Point(115, 387);
             this.cmbboxAMPM.Name = "cmbboxAMPM";
             this.cmbboxAMPM.Size = new System.Drawing.Size(47, 24);
             this.cmbboxAMPM.TabIndex = 8;
@@ -430,7 +430,7 @@ namespace Contact_Tracer_App
             this.lblColon.AutoSize = true;
             this.lblColon.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblColon.ForeColor = System.Drawing.Color.White;
-            this.lblColon.Location = new System.Drawing.Point(50, 371);
+            this.lblColon.Location = new System.Drawing.Point(50, 391);
             this.lblColon.Name = "lblColon";
             this.lblColon.Size = new System.Drawing.Size(12, 14);
             this.lblColon.TabIndex = 29;
@@ -442,7 +442,8 @@ namespace Contact_Tracer_App
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(450, 450);
+            this.BackgroundImage = global::Contact_Tracer_App.Properties.Resources.Contact_Tracing1;
+            this.ClientSize = new System.Drawing.Size(450, 465);
             this.Controls.Add(this.lblColon);
             this.Controls.Add(this.cmbboxAMPM);
             this.Controls.Add(this.cmbboxMinute);
