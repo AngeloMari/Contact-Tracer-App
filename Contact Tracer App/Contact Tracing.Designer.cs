@@ -66,7 +66,7 @@ namespace Contact_Tracer_App
             this.txtboxName.Name = "txtboxName";
             this.txtboxName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtboxName.Size = new System.Drawing.Size(256, 23);
-            this.txtboxName.TabIndex = 1;
+            this.txtboxName.TabIndex = 0;
             // 
             // lblName
             // 
@@ -166,7 +166,7 @@ namespace Contact_Tracer_App
             this.txtboxAddress.Name = "txtboxAddress";
             this.txtboxAddress.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtboxAddress.Size = new System.Drawing.Size(326, 23);
-            this.txtboxAddress.TabIndex = 10;
+            this.txtboxAddress.TabIndex = 2;
             // 
             // lblSubaddress
             // 
@@ -188,7 +188,7 @@ namespace Contact_Tracer_App
             this.txtboxAge.Location = new System.Drawing.Point(298, 82);
             this.txtboxAge.Name = "txtboxAge";
             this.txtboxAge.Size = new System.Drawing.Size(40, 23);
-            this.txtboxAge.TabIndex = 13;
+            this.txtboxAge.TabIndex = 1;
             // 
             // txtboxContact
             // 
@@ -199,7 +199,7 @@ namespace Contact_Tracer_App
             this.txtboxContact.Location = new System.Drawing.Point(12, 191);
             this.txtboxContact.Name = "txtboxContact";
             this.txtboxContact.Size = new System.Drawing.Size(266, 23);
-            this.txtboxContact.TabIndex = 14;
+            this.txtboxContact.TabIndex = 3;
             // 
             // txtboxEmail
             // 
@@ -210,7 +210,7 @@ namespace Contact_Tracer_App
             this.txtboxEmail.Location = new System.Drawing.Point(12, 246);
             this.txtboxEmail.Name = "txtboxEmail";
             this.txtboxEmail.Size = new System.Drawing.Size(266, 23);
-            this.txtboxEmail.TabIndex = 15;
+            this.txtboxEmail.TabIndex = 4;
             // 
             // txtboxTemp
             // 
@@ -221,7 +221,7 @@ namespace Contact_Tracer_App
             this.txtboxTemp.Location = new System.Drawing.Point(12, 304);
             this.txtboxTemp.Name = "txtboxTemp";
             this.txtboxTemp.Size = new System.Drawing.Size(44, 23);
-            this.txtboxTemp.TabIndex = 16;
+            this.txtboxTemp.TabIndex = 5;
             // 
             // btnEdit
             // 
@@ -233,7 +233,7 @@ namespace Contact_Tracer_App
             this.btnEdit.Location = new System.Drawing.Point(273, 415);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(74, 23);
-            this.btnEdit.TabIndex = 1;
+            this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -270,7 +270,7 @@ namespace Contact_Tracer_App
             this.btnDone.Location = new System.Drawing.Point(156, 415);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(74, 23);
-            this.btnDone.TabIndex = 23;
+            this.btnDone.TabIndex = 11;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = false;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
@@ -299,7 +299,7 @@ namespace Contact_Tracer_App
             this.btnSave.Location = new System.Drawing.Point(156, 415);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(74, 23);
-            this.btnSave.TabIndex = 25;
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -308,10 +308,10 @@ namespace Contact_Tracer_App
             // 
             this.cmbboxHour.AllowDrop = true;
             this.cmbboxHour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
+            this.cmbboxHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbboxHour.DropDownWidth = 1;
             this.cmbboxHour.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbboxHour.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cmbboxHour.FormattingEnabled = true;
             this.cmbboxHour.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.cmbboxHour.Items.AddRange(new object[] {
             "1",
@@ -329,13 +329,14 @@ namespace Contact_Tracer_App
             this.cmbboxHour.Location = new System.Drawing.Point(9, 367);
             this.cmbboxHour.Name = "cmbboxHour";
             this.cmbboxHour.Size = new System.Drawing.Size(40, 24);
-            this.cmbboxHour.TabIndex = 26;
+            this.cmbboxHour.TabIndex = 6;
             this.cmbboxHour.SelectedIndexChanged += new System.EventHandler(this.cmbboxHour_SelectedIndexChanged);
             // 
             // cmbboxMinute
             // 
             this.cmbboxMinute.AllowDrop = true;
             this.cmbboxMinute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
+            this.cmbboxMinute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbboxMinute.DropDownWidth = 1;
             this.cmbboxMinute.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbboxMinute.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -405,12 +406,13 @@ namespace Contact_Tracer_App
             this.cmbboxMinute.Location = new System.Drawing.Point(62, 367);
             this.cmbboxMinute.Name = "cmbboxMinute";
             this.cmbboxMinute.Size = new System.Drawing.Size(47, 24);
-            this.cmbboxMinute.TabIndex = 27;
+            this.cmbboxMinute.TabIndex = 7;
             // 
             // cmbboxAMPM
             // 
             this.cmbboxAMPM.AllowDrop = true;
             this.cmbboxAMPM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(64)))));
+            this.cmbboxAMPM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbboxAMPM.DropDownWidth = 1;
             this.cmbboxAMPM.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbboxAMPM.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -422,7 +424,7 @@ namespace Contact_Tracer_App
             this.cmbboxAMPM.Location = new System.Drawing.Point(115, 367);
             this.cmbboxAMPM.Name = "cmbboxAMPM";
             this.cmbboxAMPM.Size = new System.Drawing.Size(47, 24);
-            this.cmbboxAMPM.TabIndex = 28;
+            this.cmbboxAMPM.TabIndex = 8;
             // 
             // lblColon
             // 

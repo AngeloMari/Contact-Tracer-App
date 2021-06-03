@@ -44,6 +44,18 @@ namespace Contact_Tracer_App
             {
                 btnDone.Hide();
             }
+            else if (string.IsNullOrEmpty(cmbboxHour.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(cmbboxMinute.Text))
+            {
+                btnDone.Hide();
+            }
+            else if (string.IsNullOrEmpty(cmbboxAMPM.Text))
+            {
+                btnDone.Hide();
+            }
             else
             {
                 btnDone.Show();
@@ -60,20 +72,7 @@ namespace Contact_Tracer_App
                 cmbboxMinute.Enabled = false;
             }
 
-            if (cmbboxHour.SelectedItem != null && !string.IsNullOrEmpty(cmbboxHour.SelectedItem.ToString()))
-            {
-                btnDone.Show();
-                btnSave.Hide();
-            }
-            else
-            {
-                btnDone.Hide();
-                btnSave.Show();
-            }
-
-            short age;
-            short.TryParse(txtboxAge.Text, out age);
-            if (short.TryParse(txtboxAge.Text, out age))
+            if (short.TryParse(txtboxAge.Text, out short age))
             {//To check the age
                 if ((age < 18) || (age > 65))
                 {
@@ -85,9 +84,7 @@ namespace Contact_Tracer_App
                 MessageBox.Show("Please enter a number for your age!");
             }
 
-            float temp;
-            float.TryParse(txtboxTemp.Text, out temp);
-            if (float.TryParse(txtboxTemp.Text, out temp))
+            if (float.TryParse(txtboxTemp.Text, out float temp))
             {//To check the temperature
                 if (temp >= 37.4)
                 {
