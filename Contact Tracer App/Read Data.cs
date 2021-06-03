@@ -30,7 +30,10 @@ namespace Contact_Tracer_App
 
         private void lnkHere_Clicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("");
+            MessageBox.Show("Privacy and Terms\n\n" + "     We respect your privacy and protect any personal information that you share with us. " +
+                "We commit to secure the individual’s right to privacy, and therefore, we strictly comply with RA 10173- Data Privacy Act of 2012. " +
+                "Our goal is to protect your personal information regardless of how you able to use this service. " +
+                "By using this contact tracing app, you consent to the collection, storage, processing, and transferring of data you have provided.");
         }
 
         private void btnExit_Click(object sender, EventArgs e)

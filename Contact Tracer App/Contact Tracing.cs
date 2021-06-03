@@ -73,7 +73,7 @@ namespace Contact_Tracer_App
                 if ((age < 18) || (age > 65))
                 {
                     btnRead.Hide();
-                    MessageBox.Show("Sorry you are not allowed to go outside based on your age.");
+                    MessageBox.Show("Sorry, you are not allowed to go outside based on your age.");
                 }
                 else if ((age >= 18) || (age <= 65))
                 {//To write the file if the age is in range.
@@ -121,8 +121,8 @@ namespace Contact_Tracer_App
                 if (temp >= 37.4)
                 {
                     btnRead.Hide();
-                    MessageBox.Show("Sorry, you are not allowed to go outside." +
-                        "\nYour body temperature is " + temp + "." + "\nYou have a fever!");
+                    MessageBox.Show("Sorry, you should not be going outside." +
+                        "\nYour body temperature is " + temp + "°C" + "." + "\nYou have a fever!");
                 }
                 else if (temp < 37.4)
                 {//To write the file if the temperature is in range
@@ -165,7 +165,7 @@ namespace Contact_Tracer_App
         }
 
         private void btnRead_Click(object sender, EventArgs e)
-        {
+        {//To show the second form
             Read_Data readForm = new();
             readForm.Show();
 
@@ -200,7 +200,7 @@ namespace Contact_Tracer_App
             StreamWriter traceFile;
             traceFile = File.CreateText("Contact_Tracing.txt");
             traceFile.WriteLine("You can find the contact tracing details here.");
-            traceFile.WriteLine("Each file with date as a name contains the information for each day.");
+            traceFile.WriteLine("Each file with the date as a name contains the information for each day.");
             traceFile.Close();
         }
     }
