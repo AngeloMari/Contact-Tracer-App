@@ -47,7 +47,7 @@ namespace Contact_Tracer_App
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblDegrees = new System.Windows.Forms.Label();
             this.lblSubcontact = new System.Windows.Forms.Label();
-            this.btnDone = new System.Windows.Forms.Button();
+            this.btnRead = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.cmbboxHour = new System.Windows.Forms.ComboBox();
@@ -230,7 +230,7 @@ namespace Contact_Tracer_App
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(273, 415);
+            this.btnEdit.Location = new System.Drawing.Point(252, 415);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(74, 23);
             this.btnEdit.TabIndex = 10;
@@ -260,20 +260,20 @@ namespace Contact_Tracer_App
             this.lblSubcontact.TabIndex = 22;
             this.lblSubcontact.Text = "(Telephone/Mobile No.)";
             // 
-            // btnDone
+            // btnRead
             // 
-            this.btnDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.btnDone.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDone.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDone.ForeColor = System.Drawing.Color.White;
-            this.btnDone.Location = new System.Drawing.Point(156, 415);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(74, 23);
-            this.btnDone.TabIndex = 11;
-            this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = false;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
+            this.btnRead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.btnRead.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRead.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRead.ForeColor = System.Drawing.Color.White;
+            this.btnRead.Location = new System.Drawing.Point(122, 415);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(74, 23);
+            this.btnRead.TabIndex = 11;
+            this.btnRead.Text = "Read";
+            this.btnRead.UseVisualStyleBackColor = false;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // btnX
             // 
@@ -281,7 +281,7 @@ namespace Contact_Tracer_App
             this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnX.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnX.ForeColor = System.Drawing.Color.White;
-            this.btnX.Location = new System.Drawing.Point(468, 2);
+            this.btnX.Location = new System.Drawing.Point(422, 3);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(25, 27);
             this.btnX.TabIndex = 24;
@@ -296,7 +296,7 @@ namespace Contact_Tracer_App
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(156, 415);
+            this.btnSave.Location = new System.Drawing.Point(122, 415);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(74, 23);
             this.btnSave.TabIndex = 9;
@@ -330,7 +330,6 @@ namespace Contact_Tracer_App
             this.cmbboxHour.Name = "cmbboxHour";
             this.cmbboxHour.Size = new System.Drawing.Size(40, 24);
             this.cmbboxHour.TabIndex = 6;
-            this.cmbboxHour.SelectedIndexChanged += new System.EventHandler(this.cmbboxHour_SelectedIndexChanged);
             // 
             // cmbboxMinute
             // 
@@ -443,14 +442,14 @@ namespace Contact_Tracer_App
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(495, 450);
+            this.ClientSize = new System.Drawing.Size(450, 450);
             this.Controls.Add(this.lblColon);
             this.Controls.Add(this.cmbboxAMPM);
             this.Controls.Add(this.cmbboxMinute);
             this.Controls.Add(this.cmbboxHour);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.btnDone);
+            this.Controls.Add(this.btnRead);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblSubcontact);
             this.Controls.Add(this.lblDegrees);
@@ -499,7 +498,7 @@ namespace Contact_Tracer_App
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblDegrees;
         private System.Windows.Forms.Label lblSubcontact;
-        private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cmbboxHour;

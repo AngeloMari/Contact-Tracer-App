@@ -22,115 +22,158 @@ namespace Contact_Tracer_App
         {//To require all fields to be filled
             if (string.IsNullOrEmpty(txtboxAddress.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(txtboxAge.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(txtboxContact.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(txtboxEmail.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(txtboxName.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(txtboxTemp.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(cmbboxHour.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(cmbboxMinute.Text))
             {
-                btnDone.Hide();
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
             else if (string.IsNullOrEmpty(cmbboxAMPM.Text))
             {
-                btnDone.Hide();
-            }
-            else
-            {
-                btnDone.Show();
-                btnSave.Hide();
-
-                txtboxAddress.Enabled = false;
-                txtboxAge.Enabled = false;
-                txtboxContact.Enabled = false;
-                txtboxEmail.Enabled = false;
-                txtboxName.Enabled = false;
-                txtboxTemp.Enabled = false;
-                cmbboxAMPM.Enabled = false;
-                cmbboxHour.Enabled = false;
-                cmbboxMinute.Enabled = false;
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
             }
 
-            if (short.TryParse(txtboxAge.Text, out short age))
+            //////////////////// To check the appropriate age ////////////////////
+
+            else if (short.TryParse(txtboxAge.Text, out short age))
             {//To check the age
                 if ((age < 18) || (age > 65))
                 {
+                    btnRead.Hide();
                     MessageBox.Show("Sorry you are not allowed to go outside based on your age.");
                 }
+                else if ((age >= 18) || (age <= 65))
+                {//To write the file if the age is in range.
+                    StreamWriter traceFile;
+                    string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
+                    string date = DateTime.UtcNow.ToLongDateString();
+
+                    traceFile = File.AppendText(createDate);
+                    traceFile.WriteLine("Name: " + txtboxName.Text);
+                    traceFile.WriteLine("Age: " + txtboxAge.Text);
+                    traceFile.WriteLine("Address: " + txtboxAddress.Text);
+                    traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
+                    traceFile.WriteLine("Email: " + txtboxEmail.Text);
+                    traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
+                    traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
+                    traceFile.WriteLine("");
+                    traceFile.WriteLine("_______________________________________________");
+                    traceFile.WriteLine("");
+                    traceFile.Close();
+
+                    btnRead.Show();
+                    btnSave.Hide();
+
+                    txtboxAddress.Enabled = false;
+                    txtboxAge.Enabled = false;
+                    txtboxContact.Enabled = false;
+                    txtboxEmail.Enabled = false;
+                    txtboxName.Enabled = false;
+                    txtboxTemp.Enabled = false;
+                    cmbboxAMPM.Enabled = false;
+                    cmbboxHour.Enabled = false;
+                    cmbboxMinute.Enabled = false;
+                }
             }
-            else
-            {
-                MessageBox.Show("Please enter a number for your age!");
+            else if (!short.TryParse(txtboxAge.Text, out short ageNum))
+            {//To not allow the user from entering letters or word
+                btnRead.Hide();
+                MessageBox.Show("PLease enter a number!");
             }
 
-            if (float.TryParse(txtboxTemp.Text, out float temp))
+            //////////////////// To check the appropriate body temperature ////////////////////
+
+            else if (float.TryParse(txtboxTemp.Text, out float temp))
             {//To check the temperature
                 if (temp >= 37.4)
                 {
-                    MessageBox.Show("Sorry, you are not allowed to enter." +
-                        "\nYour body temperature is " + temp + "\nYou have a fever!");
+                    btnRead.Hide();
+                    MessageBox.Show("Sorry, you are not allowed to go outside." +
+                        "\nYour body temperature is " + temp + "." + "\nYou have a fever!");
+                }
+                else if (temp < 37.4)
+                {//To write the file if the temperature is in range
+                    StreamWriter traceFile;
+                    string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
+                    string date = DateTime.UtcNow.ToLongDateString();
+
+                    traceFile = File.AppendText(createDate);
+                    traceFile.WriteLine("Name: " + txtboxName.Text);
+                    traceFile.WriteLine("Age: " + txtboxAge.Text);
+                    traceFile.WriteLine("Address: " + txtboxAddress.Text);
+                    traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
+                    traceFile.WriteLine("Email: " + txtboxEmail.Text);
+                    traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
+                    traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
+                    traceFile.WriteLine("");
+                    traceFile.WriteLine("_______________________________________________");
+                    traceFile.WriteLine("");
+                    traceFile.Close();
+
+                    btnRead.Show();
+                    btnSave.Hide();
+
+                    txtboxAddress.Enabled = false;
+                    txtboxAge.Enabled = false;
+                    txtboxContact.Enabled = false;
+                    txtboxEmail.Enabled = false;
+                    txtboxName.Enabled = false;
+                    txtboxTemp.Enabled = false;
+                    cmbboxAMPM.Enabled = false;
+                    cmbboxHour.Enabled = false;
+                    cmbboxMinute.Enabled = false;
                 }
             }
-            else
-            {
-                MessageBox.Show("Please enter a number in the Temperature textbox!");
+            else if (!float.TryParse(txtboxTemp.Text, out float tempNum))
+            {//To check the temperature
+                btnRead.Hide();
+                MessageBox.Show("PLease enter a number!");
             }
         }
 
-        private void cmbboxHour_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnRead_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {//To write and save the contact tracing details
-            StreamWriter traceFile;
-            string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
-            string date = DateTime.UtcNow.ToLongDateString();
-            
-            traceFile = File.AppendText(createDate);
-            traceFile.WriteLine("Name: " + txtboxName.Text);
-            traceFile.WriteLine("Age: " + txtboxAge.Text);
-            traceFile.WriteLine("Address: " + txtboxAddress.Text);
-            traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
-            traceFile.WriteLine("Email: " + txtboxEmail.Text);
-            traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
-            traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
-            traceFile.WriteLine("");
-            traceFile.WriteLine("==================================================");
-            traceFile.WriteLine("");
-            traceFile.Close();
-
-            Read_Data readForm = new Read_Data();
+            Read_Data readForm = new();
             readForm.Show();
 
-            Contact_Tracing traceForm = new Contact_Tracing();
-            traceForm.Hide();
+            this.Hide();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {//To enable and allow editing in all fields
+        {//To enable editing in all fields
             txtboxAddress.Enabled = true;
             txtboxAge.Enabled = true;
             txtboxContact.Enabled = true;
@@ -141,7 +184,7 @@ namespace Contact_Tracer_App
             cmbboxHour.Enabled = true;
             cmbboxMinute.Enabled = true;
 
-            btnDone.Hide();
+            btnRead.Hide();
             btnSave.Show();
         }
 
@@ -152,7 +195,7 @@ namespace Contact_Tracer_App
 
         private void Contact_Tracing_Load(object sender, EventArgs e)
         {//To hide done button and fill all fields first.
-            btnDone.Hide();
+            btnRead.Hide();
 
             StreamWriter traceFile;
             traceFile = File.CreateText("Contact_Tracing.txt");
