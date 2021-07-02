@@ -22,7 +22,7 @@ namespace Contact_Tracer_App
         public bool parameterPassed = true;
 
         public void Parameters()
-        {
+        {//Conditions to be passed in order to write and save the user's data.
             if (string.IsNullOrEmpty(Address))
             {
                 parameterPassed = false;
@@ -99,11 +99,13 @@ namespace Contact_Tracer_App
             {
                 parameterPassed = true;
 
+                string path = Environment.CurrentDirectory + "/" + "Contact Tracing Data";
+                DirectoryInfo newFolder;
+                newFolder = Directory.CreateDirectory(path);
                 StreamWriter traceFile;
                 string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
                 string date = DateTime.UtcNow.ToLongDateString();
-
-                traceFile = File.AppendText(createDate);
+                traceFile = File.AppendText(newFolder + "/" + createDate);
                 traceFile.WriteLine("Name: " + Name);
                 traceFile.WriteLine("Age: " + Age);
                 traceFile.WriteLine("Address: " + Address);

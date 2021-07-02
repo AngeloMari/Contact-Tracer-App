@@ -20,7 +20,10 @@ namespace Contact_Tracer_App
 
         private void Read_Data_Load(object sender, EventArgs e)
         {
-            txtboxRead.Text = File.ReadAllText(DateTime.UtcNow.ToLongDateString() + ".txt");
+            string path = Environment.CurrentDirectory + "/" + "Contact Tracing Data";
+            DirectoryInfo newFolder;
+            newFolder = Directory.CreateDirectory(path);
+            txtboxRead.Text = File.ReadAllText(newFolder + "/" + DateTime.UtcNow.ToLongDateString() + ".txt");
         }
 
         private void btnX_Click(object sender, EventArgs e)

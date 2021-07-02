@@ -64,7 +64,7 @@ namespace Contact_Tracer_App
         }
 
         private void btnRead_Click(object sender, EventArgs e)
-        {//To show the second form
+        {//To show the second form that will read the written file.
             Read_Data readForm = new();
             readForm.Show();
 
@@ -82,7 +82,7 @@ namespace Contact_Tracer_App
             cmbboxAMPM.Enabled = true;
             cmbboxHour.Enabled = true;
             cmbboxMinute.Enabled = true;
-
+         //To allow saving again
             btnRead.Hide();
             btnSave.Show();
         }
@@ -95,9 +95,12 @@ namespace Contact_Tracer_App
         private void Contact_Tracing_Load(object sender, EventArgs e)
         {//To hide done button and fill all fields first.
             btnRead.Hide();
-
+         //Creating an initial file that contains instruction.
+            string path = Environment.CurrentDirectory + "/" + "Contact Tracing Data";
+            DirectoryInfo newFolder;
+            newFolder = Directory.CreateDirectory(path);
             StreamWriter traceFile;
-            traceFile = File.CreateText("Contact_Tracing.txt");
+            traceFile = File.CreateText(newFolder + "/Contact Tracing.txt");
             traceFile.WriteLine("You can find the contact tracing details here.");
             traceFile.WriteLine("Each file with the date as a name contains the information for each day.");
             traceFile.Close();
