@@ -40,6 +40,11 @@ namespace Contact_Tracer_App
                 btnRead.Hide();
                 MessageBox.Show("Please answer all fields!");
             }
+            else if (!txtboxEmail.Text.Contains("@"))
+            {
+                btnRead.Hide();
+                MessageBox.Show("Please answer all fields!");
+            }
             else if (string.IsNullOrEmpty(txtboxName.Text))
             {
                 btnRead.Hide();
