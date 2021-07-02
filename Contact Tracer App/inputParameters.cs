@@ -43,11 +43,6 @@ namespace Contact_Tracer_App
                 parameterPassed = false;
                 ErrorMessage = "Please answer all fields!";
             }
-            else if (!Email.Contains("@"))
-            {
-                parameterPassed = false;
-                ErrorMessage = "Please answer all fields!";
-            }
             else if (string.IsNullOrEmpty(Name))
             {
                 parameterPassed = false;
@@ -72,6 +67,11 @@ namespace Contact_Tracer_App
             {
                 parameterPassed = false;
                 ErrorMessage = "Please answer all fields!";
+            }
+            else if (!Email.Contains("@"))
+            {
+                parameterPassed = false;
+                ErrorMessage = "Please enter a valid email!";
             }
             else if (short.TryParse(Age, out short age) && ((age < 18) || (age > 65))) //To check the appropriate age
             {

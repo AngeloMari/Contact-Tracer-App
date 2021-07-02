@@ -29,6 +29,7 @@ namespace Contact_Tracer_App
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Read_Data));
             this.txtboxRead = new System.Windows.Forms.RichTextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.lnklblHere = new System.Windows.Forms.LinkLabel();
@@ -115,6 +116,7 @@ namespace Contact_Tracer_App
             this.Controls.Add(this.txtboxRead);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Read_Data";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Read_Data";
