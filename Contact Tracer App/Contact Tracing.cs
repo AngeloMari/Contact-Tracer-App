@@ -19,7 +19,52 @@ namespace Contact_Tracer_App
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {//To require all fields to be filled
+        {//To require all fields to be filled properly before writing a file.
+            inputParameter();
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {//To show the second form
+            Read_Data readForm = new();
+            readForm.Show();
+
+            this.Hide();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {//To enable editing in all fields
+            txtboxAddress.Enabled = true;
+            txtboxAge.Enabled = true;
+            txtboxContact.Enabled = true;
+            txtboxEmail.Enabled = true;
+            txtboxName.Enabled = true;
+            txtboxTemp.Enabled = true;
+            cmbboxAMPM.Enabled = true;
+            cmbboxHour.Enabled = true;
+            cmbboxMinute.Enabled = true;
+
+            btnRead.Hide();
+            btnSave.Show();
+        }
+
+            private void btnX_Click(object sender, EventArgs e)
+        {//To exit the contact tracing app
+            Application.Exit();
+        }
+
+        private void Contact_Tracing_Load(object sender, EventArgs e)
+        {//To hide done button and fill all fields first.
+            btnRead.Hide();
+
+            StreamWriter traceFile;
+            traceFile = File.CreateText("Contact_Tracing.txt");
+            traceFile.WriteLine("You can find the contact tracing details here.");
+            traceFile.WriteLine("Each file with the date as a name contains the information for each day.");
+            traceFile.Close();
+        }
+
+        private void inputParameter()
+        {
             if (string.IsNullOrEmpty(txtboxAddress.Text))
             {
                 btnRead.Hide();
@@ -128,46 +173,6 @@ namespace Contact_Tracer_App
                 cmbboxHour.Enabled = false;
                 cmbboxMinute.Enabled = false;
             }
-        }
-
-        private void btnRead_Click(object sender, EventArgs e)
-        {//To show the second form
-            Read_Data readForm = new();
-            readForm.Show();
-
-            this.Hide();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {//To enable editing in all fields
-            txtboxAddress.Enabled = true;
-            txtboxAge.Enabled = true;
-            txtboxContact.Enabled = true;
-            txtboxEmail.Enabled = true;
-            txtboxName.Enabled = true;
-            txtboxTemp.Enabled = true;
-            cmbboxAMPM.Enabled = true;
-            cmbboxHour.Enabled = true;
-            cmbboxMinute.Enabled = true;
-
-            btnRead.Hide();
-            btnSave.Show();
-        }
-
-            private void btnX_Click(object sender, EventArgs e)
-        {//To exit the contact tracing app
-            Application.Exit();
-        }
-
-        private void Contact_Tracing_Load(object sender, EventArgs e)
-        {//To hide done button and fill all fields first.
-            btnRead.Hide();
-
-            StreamWriter traceFile;
-            traceFile = File.CreateText("Contact_Tracing.txt");
-            traceFile.WriteLine("You can find the contact tracing details here.");
-            traceFile.WriteLine("Each file with the date as a name contains the information for each day.");
-            traceFile.Close();
         }
     }
 }
