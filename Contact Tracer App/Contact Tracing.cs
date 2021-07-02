@@ -65,59 +65,11 @@ namespace Contact_Tracer_App
                 btnRead.Hide();
                 MessageBox.Show("Please answer all fields!");
             }
-
-            //////////////////// To check the appropriate age ////////////////////
-
-            else if (short.TryParse(txtboxAge.Text, out short age))
-            {//To check the age
-                if ((age < 18) || (age > 65))
-                {
-                    txtboxAddress.Enabled = false;
-                    txtboxAge.Enabled = false;
-                    txtboxContact.Enabled = false;
-                    txtboxEmail.Enabled = false;
-                    txtboxName.Enabled = false;
-                    txtboxTemp.Enabled = false;
-                    cmbboxAMPM.Enabled = false;
-                    cmbboxHour.Enabled = false;
-                    cmbboxMinute.Enabled = false;
-
-                    btnRead.Hide();
-                    btnSave.Hide();
-                    MessageBox.Show("Sorry, you are not allowed to go outside based on your age.");
-                }
-                else if ((age >= 18) || (age <= 65))
-                {//To write the file if the age is in range.
-                    StreamWriter traceFile;
-                    string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
-                    string date = DateTime.UtcNow.ToLongDateString();
-
-                    traceFile = File.AppendText(createDate);
-                    traceFile.WriteLine("Name: " + txtboxName.Text);
-                    traceFile.WriteLine("Age: " + txtboxAge.Text);
-                    traceFile.WriteLine("Address: " + txtboxAddress.Text);
-                    traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
-                    traceFile.WriteLine("Email: " + txtboxEmail.Text);
-                    traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
-                    traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
-                    traceFile.WriteLine("");
-                    traceFile.WriteLine("_______________________________________________");
-                    traceFile.WriteLine("");
-                    traceFile.Close();
-
-                    btnRead.Show();
-                    btnSave.Hide();
-
-                    txtboxAddress.Enabled = false;
-                    txtboxAge.Enabled = false;
-                    txtboxContact.Enabled = false;
-                    txtboxEmail.Enabled = false;
-                    txtboxName.Enabled = false;
-                    txtboxTemp.Enabled = false;
-                    cmbboxAMPM.Enabled = false;
-                    cmbboxHour.Enabled = false;
-                    cmbboxMinute.Enabled = false;
-                }
+            else if (short.TryParse(txtboxAge.Text, out short age) && ((age < 18) || (age > 65))) //To check the appropriate age
+            {
+                btnRead.Hide();
+                btnSave.Hide();
+                MessageBox.Show("Sorry, you are not allowed to go outside based on your age.");
             }
             else if (!short.TryParse(txtboxAge.Text, out short ageNum))
             {//To not allow the user from entering letters or word
@@ -125,66 +77,51 @@ namespace Contact_Tracer_App
                 btnSave.Hide();
                 MessageBox.Show("Please enter a number on the Age textbox!");
             }
-
-            //////////////////// To check the appropriate body temperature ////////////////////
-
-            if (float.TryParse(txtboxTemp.Text, out float temp))
-            {//To check the temperature
-                if (temp >= 37.4)
-                {
-                    btnRead.Hide();
-                    btnSave.Hide();
-                    MessageBox.Show("Sorry, you should not be going outside." +
-                        "\nYour body temperature is " + temp + "°C" + "." + "\nYou have a fever!");
-
-                    txtboxAddress.Enabled = false;
-                    txtboxAge.Enabled = false;
-                    txtboxContact.Enabled = false;
-                    txtboxEmail.Enabled = false;
-                    txtboxName.Enabled = false;
-                    txtboxTemp.Enabled = false;
-                    cmbboxAMPM.Enabled = false;
-                    cmbboxHour.Enabled = false;
-                    cmbboxMinute.Enabled = false;
-                }
-                else if (temp < 37.4)
-                {//To write the file if the temperature is in range
-                    StreamWriter traceFile;
-                    string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
-                    string date = DateTime.UtcNow.ToLongDateString();
-
-                    traceFile = File.AppendText(createDate);
-                    traceFile.WriteLine("Name: " + txtboxName.Text);
-                    traceFile.WriteLine("Age: " + txtboxAge.Text);
-                    traceFile.WriteLine("Address: " + txtboxAddress.Text);
-                    traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
-                    traceFile.WriteLine("Email: " + txtboxEmail.Text);
-                    traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
-                    traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
-                    traceFile.WriteLine("");
-                    traceFile.WriteLine("_______________________________________________");
-                    traceFile.WriteLine("");
-                    traceFile.Close();
-
-                    btnRead.Show();
-                    btnSave.Hide();
-
-                    txtboxAddress.Enabled = false;
-                    txtboxAge.Enabled = false;
-                    txtboxContact.Enabled = false;
-                    txtboxEmail.Enabled = false;
-                    txtboxName.Enabled = false;
-                    txtboxTemp.Enabled = false;
-                    cmbboxAMPM.Enabled = false;
-                    cmbboxHour.Enabled = false;
-                    cmbboxMinute.Enabled = false;
-                }
+            else if (float.TryParse(txtboxTemp.Text, out float temp) && (temp >= 37.4)) //To check the appropriate body temperature.
+            {
+                btnRead.Hide();
+                btnSave.Hide();
+                MessageBox.Show("Sorry, you should not be going outside." +
+                    "\nYour body temperature is " + temp + "°C" + "." + "\nYou have a fever!");
             }
             else if (!float.TryParse(txtboxTemp.Text, out float tempNum))
-            {//To check the temperature
+            {
                 btnRead.Hide();
                 btnSave.Hide();
                 MessageBox.Show("Please enter a number on the Temperature textbox!");
+            }
+            //If everything is working accordingly, the program will now write the file.
+            else
+            {
+                StreamWriter traceFile;
+                string createDate = DateTime.UtcNow.ToLongDateString() + ".txt";
+                string date = DateTime.UtcNow.ToLongDateString();
+
+                traceFile = File.AppendText(createDate);
+                traceFile.WriteLine("Name: " + txtboxName.Text);
+                traceFile.WriteLine("Age: " + txtboxAge.Text);
+                traceFile.WriteLine("Address: " + txtboxAddress.Text);
+                traceFile.WriteLine("Contact No.: " + txtboxContact.Text);
+                traceFile.WriteLine("Email: " + txtboxEmail.Text);
+                traceFile.WriteLine("Temperature: " + txtboxTemp.Text + "°C");
+                traceFile.WriteLine("Time: " + cmbboxHour.Text + ":" + cmbboxMinute.Text + " " + cmbboxAMPM.Text);
+                traceFile.WriteLine("");
+                traceFile.WriteLine("_______________________________________________");
+                traceFile.WriteLine("");
+                traceFile.Close();
+
+                btnRead.Show();
+                btnSave.Hide();
+
+                txtboxAddress.Enabled = false;
+                txtboxAge.Enabled = false;
+                txtboxContact.Enabled = false;
+                txtboxEmail.Enabled = false;
+                txtboxName.Enabled = false;
+                txtboxTemp.Enabled = false;
+                cmbboxAMPM.Enabled = false;
+                cmbboxHour.Enabled = false;
+                cmbboxMinute.Enabled = false;
             }
         }
 
