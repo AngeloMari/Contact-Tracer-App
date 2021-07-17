@@ -73,6 +73,11 @@ namespace Contact_Tracer_App
                 parameterPassed = false;
                 ErrorMessage = "Please enter a valid email!";
             }
+            else if (!int.TryParse(Contact, out int contactNum))
+            {//To not allow the user from entering letters or word
+                parameterPassed = false;
+                ErrorMessage = "Please enter a number on the Contact Number textbox!";
+            }
             else if (short.TryParse(Age, out short age) && ((age < 18) || (age > 65))) //To check the appropriate age
             {
                 parameterPassed = false;

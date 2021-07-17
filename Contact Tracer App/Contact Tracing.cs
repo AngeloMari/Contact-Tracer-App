@@ -87,7 +87,7 @@ namespace Contact_Tracer_App
             btnSave.Show();
         }
 
-            private void btnX_Click(object sender, EventArgs e)
+        private void btnX_Click(object sender, EventArgs e)
         {//To exit the contact tracing app
             Application.Exit();
         }
